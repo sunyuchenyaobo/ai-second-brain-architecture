@@ -103,6 +103,7 @@ ai-second-brain-architecture/        # 本身就是一个 Obsidian vault
      - **Templater**：模板自动化
      - **Dataview**：动态查询笔记
      - **Periodic Notes**：日报/周报
+   - 详细配置见 [docs/11-plugins-setup.md](docs/11-plugins-setup.md)
 
 4. **开始使用模板**
    - 新建笔记时选择 `templates/research-note.md`
@@ -157,6 +158,7 @@ ai-second-brain-architecture/        # 本身就是一个 Obsidian vault
 - [08 - 目录结构](docs/08-directory-structure.md)
 - [09 - 模板设计](docs/09-templates.md)
 - [10 - 技术栈](docs/10-tech-stack.md)
+- [11 - 插件安装与配置](docs/11-plugins-setup.md)
 
 ---
 
