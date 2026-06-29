@@ -39,7 +39,7 @@ graph TD
 
 ```mermaid
 graph LR
-    A[用户输入] --> B[Claude Code 采集]<b></b>
+    A[用户输入] --> B[Claude Code 采集]
     B --> C[NotebookLM 关联分析]
     C --> D[生成结构化笔记]
     D --> E[写入 Obsidian]
