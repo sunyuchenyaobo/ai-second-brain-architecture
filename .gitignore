@@ -1,0 +1,28 @@
+# Obsidian vault 中生成的中间文件
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/plugins/*/data.json
+.trash/
+.DS_Store
+Thumbs.db
+
+# 私有内容（本仓库为架构仓库，不应包含真实笔记）
+research/*.md
+!research/00-Research索引.md
+inbox/*.md
+daily-notes/*.md
+projects/**/*.md
+people/*.md
+raw/*.md
+context.md
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
