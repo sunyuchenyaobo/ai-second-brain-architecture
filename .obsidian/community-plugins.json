@@ -1,0 +1,13 @@
+{
+  "templater-obsidian": true,
+  "dataview": true,
+  "periodic-notes": true,
+  "obsidian-local-rest-api": false,
+  "calendar": false,
+  "obsidian-excalidraw-plugin": false,
+  "obsidian-clipper": false,
+  "obsidian-full-calendar": false,
+  "omnisearch": true,
+  "notebook-navigator": false,
+  "meta-bind": false
+}

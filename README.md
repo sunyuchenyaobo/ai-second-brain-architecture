@@ -52,29 +52,32 @@ graph LR
 ## 目录结构
 
 ```text
-ai-second-brain-architecture/
-├── README.md                          # 本文件
-├── docs/                              # 完整架构文档
-│   ├── 01-system-overview.md
-│   ├── 02-input-layer.md
-│   ├── 03-processing-layer.md
-│   ├── 04-association-layer.md
-│   ├── 05-sedimentation-layer.md
-│   ├── 06-review-layer.md
-│   ├── 07-automation-layer.md
-│   ├── 08-directory-structure.md
-│   ├── 09-templates.md
-│   └── 10-tech-stack.md
-├── starter-config/                    # 可直接使用的最小配置
-│   ├── obsidian/
-│   │   └── community-plugins.json
-│   └── templates/
-│       ├── research-note.md
-│       ├── daily-note.md
-│       └── project-note.md
-├── examples/                          # 脱敏示例
-├── architecture/                      # Mermaid 图源文件
-├── scripts/                           # 自动化脚本
+ai-second-brain-architecture/        # 本身就是一个 Obsidian vault
+├── .obsidian/                       # Obsidian 核心配置
+│   ├── app.json
+│   ├── appearance.json
+│   ├── community-plugins.json
+│   ├── core-plugins.json
+│   └── daily-notes.json
+├── inbox/                           # 临时捕获，定期清空
+├── raw/                             # 原始素材存档
+├── research/                        # 研究笔记
+│   └── 00-Research索引.md          # 自动索引脚本生成
+├── projects/                        # 项目笔记
+├── daily-notes/                     # 日记/日报
+├── people/                          # 人物笔记
+├── templates/                       # 笔记模板
+│   ├── research-note.md
+│   ├── daily-note.md
+│   └── project-note.md
+├── assets/                          # 图片等附件
+├── context.md                       # 流水线上下文
+├── scripts/                         # 自动化脚本
+├── starter-config/                  # 备用配置副本
+├── examples/                        # 脱敏示例
+├── architecture/                  # Mermaid 图源文件
+├── docs/                            # 架构文档
+├── README.md
 └── LICENSE
 ```
 
@@ -82,17 +85,42 @@ ai-second-brain-architecture/
 
 ## 快速开始
 
-1. **Fork 或 Clone 本仓库**
-2. **复制配置到 Obsidian vault**
-   - 将 `starter-config/` 下的内容复制到你的 Obsidian vault 根目录
+### 方式一：作为新 vault 打开（推荐）
+
+1. **Clone 本仓库**
+   ```bash
+   git clone https://github.com/sunyuchenyaobo/ai-second-brain-architecture.git
+   ```
+
+2. **在 Obsidian 中打开**
+   - 打开 Obsidian
+   - 点击 "Open folder as vault"
+   - 选择 `ai-second-brain-architecture` 目录
+
 3. **安装推荐插件**
-   - Templater：模板自动化
-   - Dataview：动态查询笔记
-   - Periodic Notes：日报/周报
-4. **阅读架构文档**
-   - 从 [docs/01-system-overview.md](docs/01-system-overview.md) 开始
-5. **接入 Claude Code 与 NotebookLM MCP**
-   - 详见 [docs/10-tech-stack.md](docs/10-tech-stack.md)
+   - 进入 **Settings → Community plugins → Browse**
+   - 安装并启用以下插件：
+     - **Templater**：模板自动化
+     - **Dataview**：动态查询笔记
+     - **Periodic Notes**：日报/周报
+
+4. **开始使用模板**
+   - 新建笔记时选择 `templates/research-note.md`
+   - 或配置 Templater 快捷键自动插入模板
+
+5. **（可选）配置自动化脚本**
+   ```bash
+   cd ai-second-brain-architecture
+   python scripts/update_research_index.py --vault .
+   ```
+
+### 方式二：复制配置到已有 vault
+
+如果你已有自己的 vault，可以只复制以下文件：
+
+- `templates/*.md` → 你的 vault 根目录
+- `.obsidian/*.json` → 你的 vault `.obsidian/` 目录
+- `scripts/` → 你的 vault 根目录
 
 ---
 

@@ -1,10 +1,14 @@
-# Obsidian vault 中生成的中间文件
+# Obsidian 运行时/动态文件
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
-.obsidian/plugins/*/data.json
-.trash/
-.DS_Store
-Thumbs.db
+.obsidian/plugins/**/data.json
+.obsidian/plugins/**/main.js
+.obsidian/plugins/**/styles.css
+.obsidian/plugins/**/manifest.json
+.obsidian/themes/
+.obsidian/snippets/
+.obsidian/cache
+.obsidian/*.bak
 
 # 私有内容（本仓库为架构仓库，不应包含真实笔记）
 research/*.md
@@ -26,3 +30,7 @@ venv/
 # IDE
 .vscode/
 .idea/
+
+# OS
+.DS_Store
+Thumbs.db
